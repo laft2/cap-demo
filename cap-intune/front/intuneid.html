@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <title>CAP1</title>
+</head>
+
+<body>
+    <nav class="container-fluid">
+        <ul>
+        </ul>
+        <ul>
+            <li>CAP1</li>
+        </ul>
+        <ul>
+            <li>{{ .ID }}</li>
+        </ul>
+    </nav>
+    <main class="container">
+        <h1>CAP1</h1>
+        <p>以下のメッセージをChrome拡張で署名すること</p>
+        <p id="msg">{{ .Msg }}</p>
+        <!-- <form action="/authenticate" method="post">
+            <input type="text" name="identifier">
+            <input type="password" name="passphrase">
+            <input type="submit">
+        </form> -->
+    </main>
+</body>

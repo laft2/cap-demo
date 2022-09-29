@@ -1,0 +1,28 @@
+{
+  "name": "Certificates of CtxC registerer in CAP",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://localhost:9091/*",
+    "http://localhost:9092/*"
+  ],
+  "background": {},
+  "options_page": "dist/options.html",
+  "action": {
+    "default_popup": "dist/popup.html"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+H",
+        "mac": "MacCtrl+Shift+H"
+      },
+      "description": "Run extension."
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <title>CAP2</title>
+</head>
+
+<body>
+    <nav class="container-fluid">
+        <ul>
+        </ul>
+        <ul>
+            <li>CAP2</li>
+        </ul>
+        <ul>
+            <li>
+                {{ or .ID "" }}
+            </li>
+        </ul>
+    </nav>
+    <main class="container">
+        <h2>Authorization requested from {{ .ReqEntity }}</h2>
+        <form action="/oauth2/authorize" method="post">
+            <input type="hidden" name="reqid" value="{{ .ReqId }}">
+            <input type="checkbox" name="radius_all" checked disabled> Radius's context
+            <input type="hidden" name="radius_all" value="true">
+            <table>
+                <tr>
+                    <td><input type="submit" value="authorize" formaction="/oauth2/authorize"></td>
+                    <td><input type="submit" value="cancel" class="secondary outline" formaction="/oauth2/cancel"></td>
+                </tr>
+            </table>
+        </form>
+    </main>
+</body>
